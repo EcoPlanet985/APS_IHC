@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contato</title>
+	<link rel="stylesheet" type="text/css" href="contato.css">
+	<meta charset="UTF-8">
+    <!--Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav>   
+        <!--Links superiores -->
+		<img src="E:\APS\Imagens\UnipLogo.png" class="UnipLogo">
+		<ul>
+        <li><a href="E:\APS\Home.html" class="Inicio">Inicio</a></li>
+        <li><a href="E:\APS\Solucoes\solucoes.html" class="Solucoes">Soluções</a></li>
+        <li><a href="E:\APS\Projetos\projetos.html" class="Projetos">Projetos</a></li>
+        <li><a href="E:\APS\Noticia\Noticias.html" class="Projetos"> Noticias</a></li>
+        <li><a href="E:\APS\SobreNos\sobre.html" class="Sobre">Sobre Nós</a></li>
+        <li><a href="E:\APS\Contato\contato.html" class="Contato">Contato</a></li>
+    </ul>
+	</nav>
+        <br><br>
+      <h1>Contato</h1>
+      
+      <form id="contact-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="subject">Assunto:</label>
+        <textarea id="subject" name="subject" required></textarea>
+        
+        <button type="submit">Enviar</button>
+      </form>
+      
+      <div id="notification" class="notification">
+        <span class="close-btn">&times;</span>
+        <p>Aguarde nosso contato!</p>
+      </div>
+      
+      <script>
+        const form = document.getElementById("contact-form");
+        const notification = document.getElementById("notification");
+        const closeBtn = document.querySelector(".close-btn");
+        
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          notification.classList.add("active");
+        });
+        
+        closeBtn.addEventListener("click", function() {
+          notification.classList.remove("active");
+        });
+      </script>
+    </body>
+</html>
